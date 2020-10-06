@@ -1,0 +1,66 @@
+마크다운 사용법
+http://taewan.kim/post/markdown/
+
+@ 서버에 적용
+
+gemfile이나 _config에 변경이 있을경우
+bundle exec jekyll serve
+
+아니면
+jekyll serve
+
+
+@ 테마적용
+
+gem 파일 수정후
+
+bundle install (gem 파일 적용)치면 됨.
+
+그리고 _config.yml 에서
+theme 을 바꿈.
+
+@ yml
+
+xml / json 같은 것
+
+빌드하면 html로 포팅된다.
+
+@ defulat value
+
+_config.yml에서 디폴트 값을 설정할 수 있다.
+
+  defaults:
+    -
+      scope: //이 스코프 안에서만 적용
+        path: "" //이 경로 안에서만 적용
+        type: "posts" // _post폴더 안에서만 적용
+        values:
+          layout: "post"
+
+이렇게 하면 _post폴더 아래의 모든 포스트는 layout: "post"가 적용된다.
+물론 오버라이드 가능함.
+
+@ _site
+
+빌드가 끝나고 최종적인 결과물이 포함됨
+
+@ draft
+
+_drafts 폴더 하위에 있는 post는 서버에 아직 반영하지 않는다.
+반영하지 않고 시험삼아 반영된걸 볼려면
+--draft옵션을 주어야한다.
+jekyll serve --draft
+
+@ _post 제목
+
+post의 제목은 날짜로 시작해야한다.
+기본적으로 제목으로부터 포스트의 작성날짜를 표시하지만
+파일 내에서 
+---
+layout: "post"
+title: "this is new title"
+date : 2017-09-24 15:58:59 -0700
+---
+
+처럼 설정하면 파일내의 설정을 우선시한다.
+ 
