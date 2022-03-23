@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.fineappstudio.android.petfriends",
+    "sha256_cert_fingerprints":
+    ["2C:F9:5C:2A:0C:12:93:B3:7C:53:33:48:69:3C:1F:FA:50:39:40:63:AE:AE:DE:27:E0:6A:09:23:D7:B5:6F:BC"]
+  }
+}]
